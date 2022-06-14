@@ -15,7 +15,7 @@ async function connect() {
 
 Staff.findOne()
     .then((staff) => {
-        if (staff) {
+        if (!staff) {
             const newStaff = new Staff({
                 name: 'Nguyễn Trọng Hưng',
                 dOB: new Date(2000, 03, 11),
